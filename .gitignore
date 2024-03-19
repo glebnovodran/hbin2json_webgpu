@@ -5,3 +5,5 @@ inc/**
 lib/**
 core/**
 prog/**
+smp/webgpu/scene_utils.js
+smp/webgpu/basic.json

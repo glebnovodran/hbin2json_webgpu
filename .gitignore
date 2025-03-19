@@ -7,3 +7,9 @@ core/**
 prog/**
 smp/webgpu/scene_utils.js
 smp/webgpu/basic.json
+smp/webgpu/env_sphere.json
+smp/webgpu/obj_sphere.json
+smp/webgpu/pano.json
+smp/webgpu/skin_anim.json
+smp/webgpu/skin_model.json
+smp/webgpu/skin_skel.json

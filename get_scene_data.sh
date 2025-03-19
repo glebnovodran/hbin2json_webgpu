@@ -21,4 +21,11 @@ printf "Downloading mode $DL_MODE.\nUsing $DL_CMD\n"
 printf "$FMT_BOLD$FMT_GREEN""Downloading hbin2json files...\n$FMT_OFF"
 
 $DL_CMD smp/webgpu/basic.json $HBIN2JSON_SRC_URL/smp/webgl/basic.json
+$DL_CMD smp/webgpu/env_sphere.json $HBIN2JSON_SRC_URL/smp/webgl/env_sphere.json
+$DL_CMD smp/webgpu/obj_sphere.json $HBIN2JSON_SRC_URL/smp/webgl/obj_sphere.json
+$DL_CMD smp/webgpu/pano.json $HBIN2JSON_SRC_URL/smp/webgl/pano.json
+$DL_CMD smp/webgpu/skin_anim.json $HBIN2JSON_SRC_URL/smp/webgl/skin_anim.json
+$DL_CMD smp/webgpu/skin_model.json $HBIN2JSON_SRC_URL/smp/webgl/skin_model.json
+$DL_CMD smp/webgpu/skin_skel.json $HBIN2JSON_SRC_URL/smp/webgl/skin_skel.json
+
 $DL_CMD smp/webgpu/scene_utils.js $HBIN2JSON_SRC_URL/smp/webgl/scene_utils.js

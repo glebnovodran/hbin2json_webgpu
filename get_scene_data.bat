@@ -1,5 +1,6 @@
 @echo off
 
+rem get_scene_data.bat <path_to_where_curl_is>
 
 set _CURL_=curl
 if not x%1==x (
@@ -13,14 +14,10 @@ if not exist smp\webgpu mkdir smp\webgpu
 
 set _DL_=%_CURL_% -o
 
-%_DL_% smp/webgpu/scene_utils.js %HBIN2JSON_SRC_URL%/smp/webgl/scene_utils.js
-
-%_DL_% smp/webgpu/basic.json %HBIN2JSON_SRC_URL%/smp/webgl/basic.json
-
-%_DL_% smp/webgpu/env_sphere.json %HBIN2JSON_SRC_URL%/smp/webgl/env_sphere.json
-%_DL_% smp/webgpu/obj_sphere.json %HBIN2JSON_SRC_URL%/smp/webgl/obj_sphere.json
-%_DL_% smp/webgpu/pano.json %HBIN2JSON_SRC_URL%/smp/webgl/pano.json
-
-%_DL_% smp/webgpu/skin_anim.json %HBIN2JSON_SRC_URL%/smp/webgl/skin_anim.json
-%_DL_% smp/webgpu/skin_model.json %HBIN2JSON_SRC_URL%/smp/webgl/skin_model.json
-%_DL_% smp/webgpu/skin_skel.json %HBIN2JSON_SRC_URL%/smp/webgl/skin_skel.json
+for %%i in (scene_utils.js basic.json
+            skin_model.json skin_skel.json skin_anim.json
+            env_sphere.json obj_sphere.json pano.js
+) do (
+	echo %%i
+	%_DL_% smp/webgpu/%%i %HBIN2JSON_SRC_URL%/smp/webgl/%%i
+)
